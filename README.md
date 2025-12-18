@@ -48,3 +48,14 @@ En la fase final, nos dedicamos a construir y evaluar modelos, tanto con los dat
     *   Un reporte de clasificación detallado (Precision, Recall, F1-Score por clase).
     *   Matrices de confusión visualizadas con heatmaps.
 4.  **Conclusiones**: Se observó que la aplicación de PCA tuvo un impacto negativo en el rendimiento de ambos modelos, sugiriendo que los componentes principales no retuvieron suficiente información discriminante. El **Random Forest Classifier sin PCA** fue el modelo con mejor desempeño, logrando la mayor precisión y un buen equilibrio en las métricas de clasificación.
+
+
+## Conclusión General del Proyecto
+
+En este proyecto, se abordó la tarea de clasificar países según su PIB utilizando indicadores económicos, sociales y demográficos del Banco Mundial. El proceso abarcó desde la recopilación inicial y limpieza de datos, incluyendo la gestión de valores nulos y el tratamiento de outliers, hasta la estandarización y la aplicación de técnicas de reducción de dimensionalidad.
+
+Un hallazgo clave fue la **ineficacia de la reducción de dimensionalidad mediante PCA** en este contexto específico. A pesar de que los cinco componentes principales seleccionados explicaron un porcentaje significativo de la varianza, su uso condujo a una degradación sustancial en el rendimiento de los modelos de clasificación (Random Forest y K-Nearest Neighbors). Esto sugiere que la información discriminatoria esencial para diferenciar las categorías de PIB no se conservó adecuadamente en el espacio reducido de características.
+
+La comparación de modelos reveló que el **Random Forest Classifier entrenado con el conjunto de datos original (sin PCA) fue el de mejor desempeño**, alcanzando una precisión del 80%. Esto resalta que, en ocasiones, la complejidad y las relaciones inherentes a las variables originales pueden ser más valiosas para el modelo predictivo que una representación reducida, incluso en presencia de multicolinealidad.
+
+En resumen, el proyecto demostró la importancia de una evaluación rigurosa del impacto de las técnicas de preprocesamiento, como PCA, en el rendimiento del modelo. Para esta tarea de clasificación de países por PIB, conservar la riqueza de las características originales permitió un mejor entendimiento y predicción de las distintas categorías de desarrollo económico.
